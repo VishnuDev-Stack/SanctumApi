@@ -18,6 +18,12 @@ return new class extends Migration
             $table->string('qualificaton',255);
             $table->string('profession',255);
             $table->string('status');
+            $table->string('dob');
+            $table->bigInteger('created_by')->unsigned();
+            $table->foreign('created_by')->references('id')->on('users');
+            $table->bigInteger('updated_by')->unsigned()->nullable();
+            $table->foreign('updated_by')->references('id')->on('users')->nullable();
+            $table->text('remark')->nullable();
             $table->timestamps();
         });
     }
