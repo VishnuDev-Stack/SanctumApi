@@ -67,3 +67,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 
 Composer require laravel/sanctum
+
+let jsonData = pm.response.json();
+let token = jsonData.token;
+pm.environment.set('token',token);
