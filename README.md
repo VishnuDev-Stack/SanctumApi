@@ -70,4 +70,4 @@ Composer require laravel/sanctum
 
 let jsonData = pm.response.json();
 let token = jsonData.token;
-pm.environment.set('token',token);
+pm.environment.set('token',token); 
